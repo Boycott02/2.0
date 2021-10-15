@@ -134,10 +134,13 @@
   function check1(){
     if(!$("#txtFonction").val()){
       $("#txtFonction").addClass('warning');
+      document.getElementById("progressbar").scrollIntoView();
       return false;
+      
     }
     if(!$("#txtActivite").val()){
       $("#txtActivite").addClass('warning');
+      document.getElementById("progressbar").scrollIntoView();
       return false;
     }
     return true;
