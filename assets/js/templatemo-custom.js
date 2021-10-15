@@ -131,14 +131,30 @@
   }
 
   // ---------------form js
-  
+  function check1(){
+    if(!$("#txtFonction").val()){
+      $("#txtFonction").addClass('warning');
+      return false;
+    }
+    if(!$("#txtActivite").val()){
+      $("#txtActivite").addClass('warning');
+      return false;
+    }
+    return true;
+  }
 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
-$(".next").click(function(){
-	if(animating) return false;
+$(".next").click(moveNext);
+function moveNext(){
+  var valid=true;
+  if($(this).val()=='Commencer'){
+   valid= check1();
+  }
+  if(valid){
+  if(animating) return false;
 	animating = true;
 	
 	current_fs = $(this).parent();
@@ -174,8 +190,11 @@ $(".next").click(function(){
 		//easing: 'easeInOutBack'
 	});
   document.getElementById("progressbar").scrollIntoView();
-});
-
+}
+else{
+  $(".error").show();
+}
+}
 $(".previous").click(function(){
 	if(animating) return false;
 	animating = true;

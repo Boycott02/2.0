@@ -1793,4 +1793,10 @@ padding: 0.4rem;
 .next{
   background-image: linear-gradient(90deg, var(--color3), var(--color4));
 }
+.warning{
+  border:2px #f715158a solid;
+}
+.error{
+text-align: center;
+}
 
