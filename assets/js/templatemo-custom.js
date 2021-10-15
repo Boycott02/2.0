@@ -131,6 +131,24 @@
   }
 
   // ---------------form js
+  //click in number steps
+  // $(".li").on("click",function(){
+  //   // alert($("li .active").index());
+  //   if($("li .active").index()==0){
+  //     if(check1()){
+  //       $(".next").click();
+  //     }else{
+  //       $(".error").show();
+  //     }
+      
+  //   }
+
+  //   if($("li .active").index() > $(this).index()){
+  //     $(".previous").click();
+  //   }else{
+  //     $(".next").click();
+  //   }
+  // });
   function check1(){
     if(!$("#txtFonction").val()){
       $("#txtFonction").addClass('warning');
