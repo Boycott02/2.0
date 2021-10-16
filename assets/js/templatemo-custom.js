@@ -175,6 +175,7 @@ function moveNext(){
    valid= check1();
   }
   if(valid){
+  $(".error").hide();
   if(animating) return false;
 	animating = true;
 	
@@ -251,6 +252,13 @@ $(".previous").click(function(){
 	});
   document.getElementById("progressbar").scrollIntoView();
 });
+// ------- entry key press
+$(document).keypress(
+  function(event){
+    if (event.which == '13') {
+      event.preventDefault();
+    }
+  });
 
 
 
