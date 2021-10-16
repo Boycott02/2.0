@@ -611,6 +611,9 @@ header
   .background-header .main-nav .nav li:nth-child(6) {
     padding-right: 0px;
   }
+  .nmbr{
+    width: 30%;
+  }
 }
 
 @media (max-width: 767px) {
